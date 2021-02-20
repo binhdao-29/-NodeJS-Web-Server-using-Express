@@ -1,7 +1,14 @@
 extends ../layouts/layout.pug
 block content
     h1 Create User 
+    if errors
+        each error in errors
+            .alert.alert-danger= error
     form(action="/users/create", method="POST")
-        label Name
-        input(name="name", type="text")
-        button(class="btn btn-info ml-2") Create
+        .form-group
+            label(for="Name") Name
+            input#Name.form-control.mr-sm-2.mb-2(name="name", aria-label='Create', type="text", value= values ? values.name : "")
+
+            label(for="phone") Phone Number
+            input#phone.form-control.mr-sm-2.mb-2(name="phone", aria-label='Create', type="text", value= values ? values.phone : "")
+        button.btn.btn-primary(type="submit") Create

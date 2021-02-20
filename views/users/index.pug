@@ -1,9 +1,9 @@
 extends ../layouts/layout.pug
 block content
     h1 Users List 
-        form(action="/users/search", method="GET") 
-            input(type="text", name="q", value= name)
-            button Search 
+        form.form-inline.my-2.my-lg-0(action="/users/search", method="GET")
+            input.form-control.mr-sm-2(placeholder='Search', aria-label='Search', type="text", name="q", value= name)
+            button.btn.btn-outline-success.my-2.my-sm-0 Search
         ul 
             each user in users
                 li= user.name
