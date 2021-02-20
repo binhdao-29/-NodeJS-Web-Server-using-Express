@@ -6,16 +6,10 @@
     },
     {
       "name": "Stephen",
-      "id": "qrXfPM8ki"
-    },
-    {
-      "name": "John",
-      "id": "Lr9llc2vq"
-    },
-    {
-      "name": "Stephen",
-      "phone": "0979553296",
-      "id": "lFdZRweBu"
+      "id": "qrXfPM8ki",
+      "phone": "0917123321",
+      "email": "st@gmail.com",
+      "password": "1234"
     },
     {
       "name": "John",
