@@ -5,10 +5,6 @@
       "id": "1"
     },
     {
-      "name": "Tom",
-      "id": "2"
-    },
-    {
       "name": "Stephen",
       "id": "qrXfPM8ki"
     },
@@ -17,32 +13,9 @@
       "id": "Lr9llc2vq"
     },
     {
-      "name": "congbinh",
-      "id": "hRC8MAAH1"
-    },
-    {
-      "name": "James",
-      "id": "fdhbJOxJE"
-    },
-    {
-      "name": "Đào Công Bình",
-      "phone": "0979553296",
-      "id": "z-W4I7JqT"
-    },
-    {
-      "name": "",
-      "phone": "",
-      "id": "NJhtYbhw7"
-    },
-    {
       "name": "Stephen",
       "phone": "0979553296",
       "id": "lFdZRweBu"
-    },
-    {
-      "name": "Đào Công Bình",
-      "phone": "0979553296",
-      "id": "aXq0wENbW"
     },
     {
       "name": "John",
@@ -53,6 +26,11 @@
       "name": "Stephen",
       "phone": "0917123321",
       "id": "Q6-J3o9OU"
+    },
+    {
+      "name": "Tom",
+      "phone": "0917123321",
+      "id": "ywhWf_mEF"
     }
   ]
 }

@@ -1,5 +1,5 @@
 var express = require('express');
-var db = require('./db');
+var db = require('./db.js');
 
 var userRoute = require('./routes/user.route');
 var port = 3000;
