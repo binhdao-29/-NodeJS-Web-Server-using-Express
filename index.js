@@ -1,3 +1,5 @@
+require('dotenv').config();
+console.log(process.env.SECTION_SECRET);
 var express = require('express');
 var db = require('./db.js');
 var cookieParser = require('cookie-parser');
@@ -15,7 +17,7 @@ app.use(express.json()) // for parsing application/json
 app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 
 app.use(express.static('public'));
-app.use(cookieParser('daocongbinhlearnnodejs'));
+app.use(cookieParser(process.env.SECTION_SECRET));
 
 app.get('/', function(request, response) {
     response.render('index', { users: db.get('users').value() });
