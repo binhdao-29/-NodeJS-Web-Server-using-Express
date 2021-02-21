@@ -15,7 +15,7 @@ app.use(express.json()) // for parsing application/json
 app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 
 app.use(express.static('public'));
-app.use(cookieParser());
+app.use(cookieParser('daocongbinhlearnnodejs'));
 
 app.get('/', function(request, response) {
     response.render('index', { users: db.get('users').value() });
