@@ -1,5 +1,5 @@
 require('dotenv').config();
-console.log(process.env.SECTION_SECRET);
+
 var express = require('express');
 var db = require('./db.js');
 var cookieParser = require('cookie-parser');
