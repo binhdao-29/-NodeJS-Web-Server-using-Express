@@ -1,0 +1,30 @@
+extends ../layouts/layout.pug
+block content
+    h1.mb-4 Products
+
+    nav.mb-4(action="/users/search", method="GET")
+        ul.pagination(name="page")
+            li.page-item
+                 a.page-link(href='#', aria-label='Previous')
+                    span(aria-hidden='true') &laquo;
+                    span.sr-only Previous
+            li.page-item
+                a.page-link(href='#') 1 
+            li.page-item
+                a.page-link(href='#') 2 
+            li.page-item
+                a.page-link(href='#') 3
+            li.page-item
+                a.page-link(href='#', aria-label='Next')
+                    pan(aria-hidden='true') &raquo;
+                    span.sr-only Next
+    .container 
+        .row 
+            each product in products
+                .col.col-md-3.mb-2
+                    .card(style='width: 16rem;')
+                        img.card-img-top(src= product.image, alt='Card image cap')
+                        .card-body
+                            h5.card-title= product.name
+                            p.card-text= product.description
+                            a.btn.btn-primary(href='#') Buy now

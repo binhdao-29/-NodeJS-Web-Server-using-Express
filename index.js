@@ -8,6 +8,7 @@ var authMiddleware = require('./middlewares/auth.middleware');
 
 var userRoute = require('./routes/user.route');
 var authRoute = require('./routes/auth.route');
+var productRoute = require('./routes/product.route');
 var port = 3000;
 var app = express();
 app.set('views', './views');
@@ -25,6 +26,8 @@ app.get('/', function(request, response) {
 
 app.use('/users', authMiddleware.requireAuth, userRoute);
 app.use('/auth', authRoute);
+app.use('/product', authMiddleware.requireAuth, productRoute);
+
 
 app.listen(port, function() {
     console.log('Example express listening...');
