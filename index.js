@@ -5,10 +5,12 @@ var db = require('./db.js');
 var cookieParser = require('cookie-parser');
 
 var authMiddleware = require('./middlewares/auth.middleware');
+var sessionMiddleware = require('./middlewares/session.middlewaer');
 
 var userRoute = require('./routes/user.route');
 var authRoute = require('./routes/auth.route');
 var productRoute = require('./routes/product.route');
+var cartRoute = require('./routes/cart.route');
 var port = 3000;
 var app = express();
 app.set('views', './views');
@@ -19,6 +21,7 @@ app.use(express.urlencoded({ extended: true })) // for parsing application/x-www
 
 app.use(express.static('public'));
 app.use(cookieParser(process.env.SECTION_SECRET));
+app.use(sessionMiddleware);
 
 app.get('/', function(request, response) {
     response.render('index', { users: db.get('users').value() });
@@ -26,7 +29,8 @@ app.get('/', function(request, response) {
 
 app.use('/users', authMiddleware.requireAuth, userRoute);
 app.use('/auth', authRoute);
-app.use('/product', authMiddleware.requireAuth, productRoute);
+app.use('/product', productRoute);
+app.use('/cart', cartRoute);
 
 
 app.listen(port, function() {
