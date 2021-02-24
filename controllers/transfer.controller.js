@@ -3,7 +3,9 @@ var shortid = require('shortid');
 
 
 module.exports.create = function(req, res, next) {
-    res.render('transfer/create');
+    res.render('transfer/create', {
+        csrfToken: res.locals.csrfToken
+    });
 };
 
 module.exports.postTransfer = function(req, res, next) {

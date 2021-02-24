@@ -2,6 +2,7 @@ extends ../layouts/layout.pug
 block content
     h2 Transfer 
     form(method="POST")
+        input(type="hidden", name="_csrf", value= csrfToken)
         .form-group
             label(for="account") Account
             input#account.form-control.mr-sm-2.mb-2(name="accountId", type="text")
