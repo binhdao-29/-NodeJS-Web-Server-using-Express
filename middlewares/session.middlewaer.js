@@ -12,6 +12,7 @@ module.exports = function(req, res, next) {
             id : sessionId
         }).write();
     }
+    
     var sessionId2  = req.signedCookies.sessionId;
 
     var cart = db.get('sessions')

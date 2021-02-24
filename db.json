@@ -827,6 +827,20 @@
         "9537c4f4-ec69-4ed4-bde3-af2f8bb82954": 1,
         "13e15725-c400-480b-bdf1-1c44a4e885d3": 1
       }
+    },
+    {
+      "id": "4eLpVSRnV"
+    },
+    {
+      "id": "0hPJ1Q2NN"
+    }
+  ],
+  "transfers": [
+    {
+      "id": "-WTrO8QNG",
+      "amount": 5000000,
+      "accountIdId": "123456",
+      "userId": "qrXfPM8ki"
     }
   ]
 }

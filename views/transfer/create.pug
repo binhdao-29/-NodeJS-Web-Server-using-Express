@@ -1,0 +1,11 @@
+extends ../layouts/layout.pug
+block content
+    h2 Transfer 
+    form(method="POST")
+        .form-group
+            label(for="account") Account
+            input#account.form-control.mr-sm-2.mb-2(name="accountId", type="text")
+        .form-group
+            label(for="amount") Amount
+            input#amount.form-control.mr-sm-2.mb-2(name="amount", type="number")
+        button.btn.btn-primary(type="submit") Transfer
