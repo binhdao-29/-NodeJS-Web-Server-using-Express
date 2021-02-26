@@ -2,6 +2,9 @@ require('dotenv').config();
 
 var express = require('express');
 var csurf = require('csurf');
+var mongoose = require('mongoose');
+
+mongoose.connect(process.env.MONGO_URL);
 
 var db = require('./db.js');
 var cookieParser = require('cookie-parser');
