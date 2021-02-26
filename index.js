@@ -17,6 +17,9 @@ var authRoute = require('./routes/auth.route');
 var productRoute = require('./routes/product.route');
 var cartRoute = require('./routes/cart.route');
 var transferRoute = require('./routes/transfer.route');
+
+var apiProductRoute = require('./api/routes/product.route');
+
 var port = 3000;
 var app = express();
 app.set('views', './views');
@@ -28,6 +31,8 @@ app.use(express.urlencoded({ extended: true })) // for parsing application/x-www
 app.use(express.static('public'));
 app.use(cookieParser(process.env.SECTION_SECRET));
 app.use(sessionMiddleware);
+
+app.use('/api/product', apiProductRoute);
 
 app.get('/', function(request, response) {
     response.render('index', { users: db.get('users').value() });
